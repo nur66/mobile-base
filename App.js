@@ -8,6 +8,8 @@ import { Product } from './components/Product';
 import FlexBox from './components/FlexBox';
 import Profile from './components/Profile';
 import Position from './components/Position';
+import PropsDinamis from './components/PropsDinamis';
+import StateDinamis from './components/StateDinamis';
 
 
 export default function App() {
@@ -33,19 +35,23 @@ export default function App() {
       {/* {isShow && <FlexBox />} */}
 
       {/* Menggunakan functional component */}
-      <Profile />
+      {/* <Profile /> */}
 
       {/* dibuat dengan class component */}
       {/* {icon && <Position />} */}
+
+      {/* <PropsDinamis /> */}
+
+      <StateDinamis />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  // container: {
+  //   flex: 1,
+  //   backgroundColor: '#fff',
+  //   alignItems: 'center',
+  //   justifyContent: 'center',
+  // },
 });
