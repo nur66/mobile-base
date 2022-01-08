@@ -8,17 +8,32 @@ import nur from '../assets/img/nur.jpg'
 
 const Profile = () => {
     const [subscribe, setSubscriber] = useState(200)
+
+    // useEffect(()=>{
+    //     console.log('did mount');
+    // }, []),
+    
+    // useEffect(()=>{
+    //     console.log('did update');
+    //     // akan di panggil setiap kali subcribe melakukan perubahan, karena ini update
+    //     setTimeout(()=>{
+    //         setSubscriber(400)
+    //     }, 2000)
+    //     // array subscribe ini artinya setiap perubahan apa yang mau kita baca
+    // }, [subscribe] untuk melihat updatenya
+
+    // jika ingin melakukannya dalam 1 function saja
     useEffect(()=>{
         console.log('did mount');
-    }, []),
-    
-    useEffect(()=>{
-        console.log('did update');
-        // akan di panggil setiap kali subcribe melakukan perubahan, karena ini update
         setTimeout(()=>{
-            setSubscriber(400)
-        }, 2000)
-    }, [subscribe])
+            setSubscriber(500)
+        },2000)
+        return ()=> {
+            console.log('did update');
+        }
+        // jadi setiap melakukan update kita menentukan const nya apa, contoh subscribe
+        // jadi [subscribe]
+    },[subscribe])
 
     return (
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
