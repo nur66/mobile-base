@@ -10,6 +10,9 @@ import Profile from './components/Profile';
 import Position from './components/Position';
 import PropsDinamis from './components/PropsDinamis';
 import StateDinamis from './components/StateDinamis';
+import StylingProduk from './components/StylingProduk';
+import Index from './Communication/Index';
+import BasicJavascript from './components/BasicJavascript';
 
 
 export default function App() {
@@ -39,10 +42,19 @@ export default function App() {
 
       {/* dibuat dengan class component */}
       {/* {icon && <Position />} */}
+      {/* <Position /> */}
 
       {/* <PropsDinamis /> */}
 
-      <StateDinamis />
+      {/* <StateDinamis /> */}
+
+      {/* Komunikasi dari component yang berbeda */}
+      {/* <Index /> */}
+
+      {/* <StylingProduk /> */}
+
+      <BasicJavascript />
+
     </View>
   );
 }
